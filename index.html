@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="lockscreen" class="manhinhkhoa">
+      <div class="lock">
+        <h2>Nhập mật khẩu vào đây nè!!!</h2>
+        <input
+          id="PasswordInput"
+          type="password"
+          placeholder="Mật khẩu tình yêu..."
+        />
+        <br /><br />
+        <button onclick="checkPassword()" class="nutmokhoa">Mở khóa</button>
+        <p id="errorText"></p>
+      </div>
+    </div>
+    <audio id="music" src="nhac.mp3" loop></audio>
+
+    <div class="album-box">
+      <h1>KÝ ỨC THANH XUÂN</h1>
+      <img src="anhdau.jpg" alt="" />
+      <section class="members">
+        <h4>Members</h4>
+
+        <div class="member-list">
+          <div class="member-card">
+            <img src="TV/tv1.jpg" alt="" />
+            <h3>AULIA NAHDHA</h3>
+            <p>@aulianahdha</p>
+          </div>
+
+          <div class="member-card">
+            <img src="TV/tv2.jpg" alt="" />
+            <h3>DHEA MUSTIKASANI</h3>
+            <p>@dheamustika</p>
+          </div>
+
+          <div class="member-card">
+            <img src="TV/tv3.jpg" alt="" />
+            <h3>NUHA RIZKI</h3>
+            <p>@nuharizki</p>
+          </div>
+
+          <div class="member-card">
+            <img src="TV/tv4.jpg" alt="" />
+            <h3>RIDWAN</h3>
+            <p>@ridwan</p>
+          </div>
+          <div class="member-card">
+            <img src="TV/tv5.jpg" alt="" />
+            <h3>RIDWAN</h3>
+            <p>@ridwan</p>
+          </div>
+        </div>
+        <section class="memories">
+          <h2>OUR MEMORIES</h2>
+
+          <div class="memory-gallery">
+            <img src="AB/img1.jpg" class="memory-img rotate-left" />
+            <img src="AB/img2.jpg" class="memory-img rotate-right" />
+            <img src="AB/img3.jpg" class="memory-img rotate-left" />
+            <img src="AB/img4.jpg" class="memory-img rotate-right" />
+            <img src="AB/img5.jpg" class="memory-img rotate-left" />
+            <img src="AB/img6.jpg" class="memory-img rotate-right" />
+            <img src="AB/img7.jpg" class="memory-img rotate-left" />
+            <img src="AB/img8.jpg" class="memory-img rotate-right" />
+            <img src="AB/img9.jpg" class="memory-img rotate-left" />
+            <img src="AB/img10.jpg" class="memory-img rotate-right" />
+            <img src="AB/img11.jpg" class="memory-img rotate-left" />
+            <img src="AB/img12.jpg" class="memory-img rotate-right" />
+            <img src="AB/img13.jpg" class="memory-img rotate-left" />
+            <img src="AB/img14.jpg" class="memory-img rotate-right" />
+          </div>
+        </section>
+
+        <!-- POPUP -->
+        <div id="popup" class="popup">
+          <span class="close-popup">&times;</span>
+          <img id="popup-img" />
+        </div>
+        <section class="final-message">
+          <h2>NHỮNG LỜI NHẮN</h2>
+
+          <div class="notes-container">
+            <div class="note pink">
+              “Cảm ơn vì đã xuất hiện trong thanh xuân của tụi mình 💖”
+            </div>
+
+            <div class="note yellow">
+              “Dù sau này mỗi người một nơi, mong chúng ta vẫn nhớ về nhau.”
+            </div>
+
+            <div class="note blue">“Những ngày tháng ấy thật sự rất đẹp.”</div>
+
+            <div class="note green">
+              “Sau này nhìn lại chắc sẽ nhớ dữ lắm đó 😭”
+            </div>
+
+            <div class="note purple">
+              “Thanh xuân của tụi mình mãi mãi không quên.”
+            </div>
+
+            <div class="note orange">
+              “Chúc tất cả chúng ta sẽ luôn hạnh phúc.”
+            </div>
+          </div>
+        </section>
+        <h2>Gửi bạn của tôi</h2>
+        <p id="typing-text"></p>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

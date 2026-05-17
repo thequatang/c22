@@ -33,11 +33,13 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
       }
     });
   },
   {
-    threshold: 0.2,
+    threshold: 0.15,
   },
 );
 
@@ -122,5 +124,92 @@ closePopup.addEventListener("click", () => {
 popup.addEventListener("click", (e) => {
   if (e.target === popup) {
     popup.style.display = "none";
+  }
+});
+/* animation notes */
+
+const notes = document.querySelectorAll(".note");
+
+const noteObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+  },
+);
+
+notes.forEach((note) => {
+  noteObserver.observe(note);
+});
+/* animation ảnh đầu */
+
+const heroImage = document.querySelector(".hero-image");
+
+const heroObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  },
+);
+
+heroObserver.observe(heroImage);
+/* popup member */
+
+const memberCards = document.querySelectorAll(".member-card");
+
+const memberPopup = document.getElementById("member-popup");
+
+const memberPopupImg = document.getElementById("member-popup-img");
+
+const memberPopupName = document.getElementById("member-popup-name");
+
+const memberPopupUser = document.getElementById("member-popup-user");
+
+const closeMemberPopup = document.querySelector(".close-member-popup");
+
+memberCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const img = card.querySelector("img").src;
+
+    const name = card.querySelector("h3").textContent;
+
+    const user = card.querySelector("p").textContent;
+
+    memberPopup.style.display = "flex";
+
+    memberPopupImg.src = img;
+
+    memberPopupName.textContent = name;
+
+    memberPopupUser.textContent = user;
+  });
+});
+
+/* đóng popup */
+
+closeMemberPopup.addEventListener("click", () => {
+  memberPopup.style.display = "none";
+});
+
+/* click nền để đóng */
+
+memberPopup.addEventListener("click", (e) => {
+  if (e.target === memberPopup) {
+    memberPopup.style.display = "none";
   }
 });

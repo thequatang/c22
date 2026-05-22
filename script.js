@@ -1,4 +1,4 @@
-var correctPassword = "1234"; //           /*đổi mật khẩu ở đây */
+var correctPassword = "032026"; //           /*đổi mật khẩu ở đây */
 
 function checkPassword() {
   var input = document.getElementById("PasswordInput").value;
@@ -49,7 +49,7 @@ cards.forEach((card) => {
 /Lời nhắn cuối/;
 document.addEventListener("DOMContentLoaded", function () {
   const text =
-    "Thanh xuân rồi sẽ qua đi, nhưng những kỷ niệm này sẽ mãi còn ở lại trong tim chúng ta.";
+    "Chúc các đồng chí về đơn vị mới tiếp tục giữ vững tinh thần của một người quân nhân do đơn vị đào tạo, chúc các đồng chí và gia đình thật nhiều sức khỏe luôn hoàn thành tốt mọi nhiệm vụ được cấp trên giao, TẠM BIỆT !!.";
   const typingElement = document.getElementById("typing-text");
   const section = document.querySelector(".final-message");
 
